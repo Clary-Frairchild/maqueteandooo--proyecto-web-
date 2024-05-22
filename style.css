@@ -38,7 +38,9 @@ body {
     display: inline-block;
 }
 .columna{
+    display: inline-block;
     background-color: yellow;
     width: 30%;
+    height: 100px;
 }
 
