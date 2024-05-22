@@ -1,3 +1,12 @@
+.obj-1{
+    margin: 12px;
+    background-color: blue;
+}
+.obj-2{
+    margin: 12px;
+    background-color: aquamarine;
+}
+
 .pie {
     padding: 27px;
     width: 100%;
