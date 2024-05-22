@@ -21,7 +21,9 @@
     width: 100%;
     background-color: red;
 }
-
+.interior {
+    display:block;
+}
 .cuerpo div {
     padding: 12px;
     margin:4px;
