@@ -1,3 +1,9 @@
+body {
+    background-color: greenyellow;
+    margin:0;
+    padding: 12px;
+}
+
 .obj-1{
     margin: 12px;
     background-color: blue;
@@ -30,5 +36,9 @@
     margin:4px;
     background-color: blueviolet;
     display: inline-block;
+}
+.columna{
+    background-color: yellow;
+    width: 30%;
 }
 
