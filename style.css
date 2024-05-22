@@ -22,7 +22,8 @@
     background-color: red;
 }
 .interior {
-    display:block;
+    display: inline-block;
+    background-color: grey;
 }
 .cuerpo div {
     padding: 12px;
