@@ -31,7 +31,7 @@ body {
     display: inline-block;
     background-color: grey;
 }
-.cuerpo div {
+.cuerpo>div {
     padding: 12px;
     margin:4px;
     background-color: blueviolet;
