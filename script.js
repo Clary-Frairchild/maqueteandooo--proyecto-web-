@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Necesitas un backend para manejar la subida
             // Aquí simplemente simulamos el proceso
             const file = formData.get('videoUpload');
-            const url = URL.createObjectURL(file);
+            const url ="https://www.youtube.com/embed/BY_XwvKogC8?si=d6GyLYwnTRpaY8NV";
             displayVideo(url, file.name);
         });
     }
