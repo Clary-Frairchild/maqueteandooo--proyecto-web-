@@ -1,46 +1,165 @@
 body {
-    background-color: greenyellow;
-    margin:0;
-    padding: 12px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #4a00e0, #8e2de2, #5f2c82, #3a1c71, #2b5876);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
-.obj-1{
-    margin: 12px;
-    background-color: blue;
-    border: 1px solid black;
-}
-.obj-2{
-    margin: 12px;
-    background-color: aquamarine;
-    border: 1px solid rebeccapurple;
+h1 {
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.pie {
-    padding: 27px;
+form {
+    margin: 20px 0;
+}
+
+input[type="file"],
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #4776e6, #8e54e9);
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #6a82fb, #fc5c7d);
+}
+
+#videoList {
+    margin: 20px;
+}
+
+#videoList video {
     width: 100%;
+    max-width: 600px;
+    margin: 10px 0;
+}
+
+#comments {
+    margin-top: 20px;
+    text-align: left;
+    width: 80%;
+    max-width: 600px;
+}
+
+.comment {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Fire animation */
+.fire-corner {
+    position: absolute;
+    width: 50px;
     height: 50px;
-    background-color: aqua;
+    background: url('fire.gif') no-repeat center center / contain;
 }
 
-.cuerpo {
-    padding: 12px;
+.top-left {
+    top: 0;
+    left: 0;
+    animation: fireMove 5s linear infinite;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    animation: fireMove 5s linear infinite;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    animation: fireMove 5s linear infinite;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    animation: fireMove 5s linear infinite;
+}
+
+@keyframes fireMove {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(-10px, 10px);
+    }
+    75% {
+        transform: translate(10px, 10px);
+    }
+}
+
+/* Star animation */
+.star-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: red;
-}
-.interior {
-    display: inline-block;
-    background-color: grey;
-}
-.cuerpo>div {
-    padding: 12px;
-    margin:4px;
-    background-color: blueviolet;
-    display: inline-block;
-}
-.columna{
-    display: inline-block;
-    background-color: yellow;
-    width: 30%;
-    height: 100px;
+    height: 100%;
+    pointer-events: none;
 }
 
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.5);
+    }
+}
+
+.star:hover {
+    animation: shine 1s infinite;
+}
+
+@keyframes shine {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(2);
+    }
+}
